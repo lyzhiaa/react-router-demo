@@ -21,6 +21,10 @@ export function NavbarComponent() {
       path: "/contact",
       menu: "Contact",
     },
+    {
+      path: "/products",
+      menu: "Products",
+    },
   ];
   return (
     <Navbar fluid rounded>

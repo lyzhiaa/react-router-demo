@@ -1,4 +1,4 @@
-import { Link } from "react-router";
+import CardProductComponent from "../../components/cards/CardProductComponent";
 import getProductData from "../../utils/products/GetData";
 import { useEffect, useState } from "react";
 
@@ -14,9 +14,10 @@ export default function Products() {
   }, []);
 
   return (
-    <div>
+    <div className="grid grid-cols-4 gap-5">
         {product.map(pro => (
-            <h1 key={pro.id}>{pro.title}</h1>
+            <CardProductComponent key={pro.id} image={pro.
+thumbnail} title={pro.title} price={pro.price} id={pro.id}/>
         ))}
     </div>
   )
